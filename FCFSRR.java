@@ -27,7 +27,6 @@ public class FCFSRR{
         double TSRatio = 0;
         double throughput = 0;
         int numFinished = 0;
-        int totalServiceTime = 0;
         
         //Creates report object which runs a thread to print stats every minute
         Report report = new Report();
@@ -131,7 +130,6 @@ public class FCFSRR{
                     System.out.println(" processes per second.\n");
                     
                     //update averages
-                    totalServiceTime += currentP.getServiceTime();
                     //avg finish time = total finish time / # finished processes
                     avgFinishTime = (avgFinishTime*(numFinished-1) + currentP.getFinishTime()) / numFinished;
                     //avg response time = total response time / # finished processes
