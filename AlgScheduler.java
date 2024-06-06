@@ -2,7 +2,6 @@
 Nghia Nguyen
 03/25/23
 *******************************************************************************/
-import java.io.*;
 import java.util.Scanner;
 
 public class AlgScheduler
@@ -56,8 +55,7 @@ public class AlgScheduler
             }
             
             if (alg < 1 || alg > 4) {
-                System.out.println("Invalid Input. Please try again.");
-                validAlg = false;
+                System.out.println("Invalid Input. Please try again.");                
             }
             else {
                 validAlg = true;
