@@ -1,6 +1,4 @@
-import java.util.LinkedList;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 //Highest Response Ratio Next
 public class HRRN{
@@ -23,7 +21,6 @@ public class HRRN{
         double TSRatio = 0;
         double throughput = 0;
         int numFinished = 0;
-        int totalServiceTime = 0;
         
         //Runs thread to print averages every minute
         Report report = new Report();
@@ -138,7 +135,6 @@ public class HRRN{
                     System.out.println(" processes per second.\n");
                     
                     //Calculate averages
-                    totalServiceTime += currentP.getServiceTime();
                     avgFinishTime = (avgFinishTime*(numFinished-1) + currentP.getFinishTime()) / numFinished;
                     avgResponseTime = (avgResponseTime*(numFinished-1) + currentP.getResponseTime()) / numFinished;
                     avgTAT = (avgTAT*(numFinished-1) + currentP.getFinishTime() - currentP.getArrivalTime()) / numFinished;
